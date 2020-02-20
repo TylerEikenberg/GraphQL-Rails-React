@@ -10,7 +10,7 @@ const GET_USERS = gql`
       id
       name
       email
-      postsCount
+      postCount
     }
   }
 `;
@@ -23,7 +23,7 @@ function Users({ selectUser }) {
 
   return (
     <div>
-      {data.map(user => (
+      {data.users.map(user => (
         <div key={user.id} onClick={selectUser}>
           <UserAvatar user={user} />
         </div>
