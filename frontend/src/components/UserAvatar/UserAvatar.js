@@ -1,14 +1,13 @@
 import React from 'react';
 import Gravatar from '../../../node_modules/react-gravatar';
+import './UserAvatar.css';
 
 function UserAvatar({ user }) {
   return (
     <>
-      <Gravatar
-        email={user.email}
-        size={200}
-        className='rounded-full text-center inline'
-      ></Gravatar>
+      <div className='Gravatar-container'>
+        <Gravatar email={user.email} size={200}></Gravatar>
+      </div>
       <div>
         <div>{user.name}</div>
         <p>{user.email}</p>

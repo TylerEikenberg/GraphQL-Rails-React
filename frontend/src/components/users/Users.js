@@ -22,7 +22,7 @@ function Users({ selectUser }) {
   if (error) return `Error ${error.message}`;
 
   return (
-    <div>
+    <div className='Users-container'>
       {data.users.map(user => (
         <div key={user.id} onClick={selectUser.bind(this, user)}>
           <UserAvatar user={user} />

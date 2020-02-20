@@ -2,6 +2,7 @@ import React from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import gql from 'graphql-tag';
 import { UserAvatar, Posts } from '../';
+import './User.css';
 
 const GET_USER = gql`
   query User($id: ID!) {
