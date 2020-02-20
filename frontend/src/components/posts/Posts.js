@@ -1,4 +1,5 @@
 import React from 'react';
+import './Posts.css';
 
 function Posts({ posts, user }) {
   return (
@@ -7,7 +8,7 @@ function Posts({ posts, user }) {
         <h1>Posts from {user.name}</h1>
       </div>
       {posts.map(post => (
-        <div key={post.id}>
+        <div className='Post-container' key={post.id}>
           <div>
             <h3>{post.title}</h3>
           </div>
