@@ -1,11 +1,21 @@
-import React from '../../../node_modules/react';
+import React, { useState } from '../../../node_modules/react';
 import './App.css';
 import Users from '../../components/users/Users';
 
 function App() {
+  const [selectedUser, setSelectedUser] = useState(null);
+
+  const selectUser = user => {
+    setSelectedUser(user);
+  };
+
   return (
     <div className='App'>
-      <Users></Users>
+      {selectedUser ? (
+        <User user={selectUser} selectUser={selectedUser} />
+      ) : (
+        <Users selectUser={selectedUser} />
+      )}
     </div>
   );
 }
