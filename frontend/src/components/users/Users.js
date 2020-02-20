@@ -4,9 +4,6 @@ import gql from 'graphql-tag';
 import './Users.css';
 import { UserAvatar } from '../';
 
-// import userAvatar
-// import createUser
-
 const GET_USERS = gql`
   {
     users {
