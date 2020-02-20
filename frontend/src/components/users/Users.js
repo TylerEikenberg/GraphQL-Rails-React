@@ -2,6 +2,7 @@ import React from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import gql from 'graphql-tag';
 import './Users.css';
+import UserAvatar from '../UserAvatar/UserAvatar';
 
 // import userAvatar
 // import createUser
@@ -25,11 +26,11 @@ function Users({ selectUser }) {
 
   return (
     <div>
-      {data.map(user => {
+      {data.map(user => (
         <div key={user.id} onClick={selectUser}>
           <UserAvatar user={user} />
-        </div>;
-      })}
+        </div>
+      ))}
     </div>
   );
 }
