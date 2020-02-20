@@ -12,9 +12,9 @@ function App() {
   return (
     <div className='App'>
       {selectedUser ? (
-        <User user={selectUser} selectUser={selectedUser} />
+        <User user={selectedUser} selectUser={selectUser} />
       ) : (
-        <Users selectUser={selectedUser} />
+        <Users selectUser={selectUser} />
       )}
     </div>
   );

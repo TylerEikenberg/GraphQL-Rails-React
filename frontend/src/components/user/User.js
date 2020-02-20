@@ -25,7 +25,7 @@ function User({ user, selectUser }) {
   return (
     <>
       <div>
-        <button onClick={selectUser}>Back</button>
+        <button onClick={selectUser.bind(this, null)}>Back</button>
       </div>
       <div>
         <div>

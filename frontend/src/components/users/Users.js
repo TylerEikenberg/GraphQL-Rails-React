@@ -24,7 +24,7 @@ function Users({ selectUser }) {
   return (
     <div>
       {data.users.map(user => (
-        <div key={user.id} onClick={selectUser}>
+        <div key={user.id} onClick={selectUser.bind(this, user)}>
           <UserAvatar user={user} />
         </div>
       ))}
