@@ -1,5 +1,5 @@
-import React from 'react';
-import Gravatar from 'react-gravatar';
+import React from './node_modules/react';
+import Gravatar from './node_modules/react-gravatar';
 
 function UserAvatar({ user }) {
   return (

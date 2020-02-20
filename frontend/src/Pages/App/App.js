@@ -1,6 +1,6 @@
 import React, { useState } from '../../../node_modules/react';
 import './App.css';
-import Users from '../../components/users/Users';
+import { Users } from '../../components';
 
 function App() {
   const [selectedUser, setSelectedUser] = useState(null);

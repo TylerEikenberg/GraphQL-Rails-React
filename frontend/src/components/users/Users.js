@@ -2,7 +2,7 @@ import React from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import gql from 'graphql-tag';
 import './Users.css';
-import UserAvatar from '../UserAvatar/UserAvatar';
+import { UserAvatar } from '../';
 
 // import userAvatar
 // import createUser
