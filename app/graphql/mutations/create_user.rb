@@ -1,4 +1,4 @@
-class Mutation::CreateUser < Mutations::BaseMutation
+class Mutations::CreateUser < Mutations::BaseMutation
   argument :name, String, required: true
   argument :email, String, required: true
   
@@ -10,7 +10,7 @@ class Mutation::CreateUser < Mutations::BaseMutation
 
     if (user.save)
       {
-        user: user
+        user: user,
         errors: []
       }
     else
