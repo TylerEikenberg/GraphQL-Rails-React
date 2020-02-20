@@ -11,7 +11,7 @@ function UserAvatar({ user }) {
       <div>
         <div>{user.name}</div>
         <p>{user.email}</p>
-        <p>{user.postsCount}</p>
+        <p>{user.postCount}</p>
       </div>
     </>
   );
