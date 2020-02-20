@@ -6,8 +6,32 @@ import './Users.css';
 // import userAvatar
 // import createUser
 
-function Users() {
-  return <div></div>;
+const GET_USERS = gql`
+  {
+    users {
+      id
+      name
+      email
+      postsCount
+    }
+  }
+`;
+
+function Users({ selectUser }) {
+  const { loading, error, data } = useQuery(GET_USERS);
+
+  if (loading) return 'Loading...';
+  if (error) return `Error ${error.message}`;
+
+  return (
+    <div>
+      {data.map(user => {
+        <div key={user.id} onClick={selectUser}>
+          <UserAvatar user={user} />
+        </div>;
+      })}
+    </div>
+  );
 }
 
 export default Users;
